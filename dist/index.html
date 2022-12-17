@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="ist-child">
+            <div class="location-date-Container">
+                <h1 class="location">
+                </h1>
+                <p class="date"></p>
+            </div>
+            <button class="add-city" aria-label="Add new city or country">+</button> 
+        </div>
+        <p class="error"></p>
+        <div class="form hide">
+            <button class="back" aria-label="Go back">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="currentColor" d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" />
+                </svg>
+            </button>
+            <form action="get">
+                <div class="searchBox">
+                   <input type="text" placeholder="Search Location" name="city" autocomplete="off">
+                   <button type="button" class="submit-btn" aria-label="search for weatherin your city">
+                    <svg style="width:30px;height:30px" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                    </svg>
+                   </button> 
+                </div>
+            </form>
+        </div>
+    </header>
+    <main class="main">
+       <section class="current-weather-container">
+        <div class="img-temp-container">
+            <div class="weather-img-container">
+                <svg style="width:90px;height:90px" viewBox="0 0 24 24" class="weather-icon1"></svg>
+            </div>
+            <div class="tempContainer">
+                <p class="temp"></p>
+                <p class="description"></p>
+            </div>
+        </div>
+        <div class="conditions">
+            <p>
+                <span class="condition1"></span>
+                <span class="con1-title"></span>
+            </p>
+            <p>
+                <span class="condition2"></span>
+                <span class="con2-title"></span>
+            </p>
+            <p>
+                <span class="condition3"></span>
+                <span class="con3-title"></span> 
+            </p>
+            <p>
+                <span class="condition4"></span>
+                <span class="con4-title"></span>
+            </p>
+            <p>
+                <span class="condition5"></span>
+                <span class="con5-title"></span>
+            </p>
+            <p>
+                <span class="condition6"></span>
+                <span class="con6-title"></span>
+            </p>
+        </div>
+       </section>
+        <section class="forecast">
+            <p class="title"></p>
+            <div class="forecast-weather-condition">
+                <div class="first-hr f">
+                    <p class="time-1"></p>
+                    <p>
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="weather-icon2"></svg>
+                    </p>
+                    <p class="weather-condition-1"></p>
+                </div>
+                <div class="second-hr f">
+                    <p class="time-2"></p>
+                    <p>
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="weather-icon3"></svg>
+                    </p>
+                    <p class="weather-condition-2"></p>
+                </div>
+                <div class="third-hr f">
+                    <p class="time-3"></p>
+                    <p>
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="weather-icon4"></svg>
+                    </p>
+                    <p class="weather-condition-3"></p>
+                </div>
+                <div class="fourth-hr f">
+                    <p class="time-4"></p>
+                    <p>
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="weather-icon5"></svg>
+                    </p>
+                    <p class="weather-condition-4"></p>
+                </div>
+                <div class="fifth-hr f">
+                    <p class="time-5"></p>
+                    <p>
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="weather-icon6"></svg>
+                    </p>
+                    <p class="weather-condition-5"></p>
+                </div>
+                <div class="sixth-hr f">
+                    <p class="time-6"></p>
+                    <p>
+                        <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="weather-icon7"></svg>
+                    </p>
+                    <p class="weather-condition-6"></p>
+                </div>
+            </div>
+           </section>
+    </main>
+    <script src="bundle.js"></script>
+</body>
+</html>
