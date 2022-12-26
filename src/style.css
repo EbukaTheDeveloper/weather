@@ -11,6 +11,12 @@ body{
     background: var(--black);
     color:var(--white);
     font-family: 'MyFont';
+    height:100vh;
+    background-image: url('midnight.jpg');
+    background-repeat : no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 header{
     padding:0.5em 0 0 0;
@@ -40,8 +46,8 @@ header{
 }**/
 .current-weather-container{
     display:flex;
-    flex-direction:column;
-    align-items: center;
+    flex-wrap:wrap;
+    justify-content: center;
     gap:1rem;
 }
 input{
@@ -109,9 +115,9 @@ input:focus{
 .conditions{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap:calc(10px + 4vw);
-    padding-top:calc(8px + 1.5625vw);
-    padding-bottom:calc(8px + 1.5625vw);
+   gap:calc(2rem);
+    padding-top:calc(2rem);
+    padding-bottom:calc(2rem);
 }
 .conditions p {
     margin:0;
@@ -174,9 +180,45 @@ input:focus{
 .main{
     display:flex;
     flex-direction:column;
+    min-height:90vh;
+    justify-content: space-between;
 }
 button:hover{
     cursor:pointer;
+}
+@media screen and (min-width : 590px) {
+    .border{
+        border-top:none;
+        border-bottom:none;
+        border-left:1px solid var(--white);
+        padding-left:3rem;
+    }
+    .current-weather-container{
+        padding:0 calc(9px + 1vw) calc(8px + 1vw); 
+    }
+    .img-temp-container{
+        align-items: center;
+        padding-right:2rem;
+    }
+    .forecast-weather-condition{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap:1rem;
+        padding-left:2rem;
+        padding-right:2rem;
+        padding-bottom:1rem;
+    }
+    .forecast-weather-condition div{
+        flex-direction:column;
+        background:rgba(19, 27, 49, 0.3);
+        border-radius:0.3rem;
+    }
+    .forecast-weather-condition div p:nth-child(1),.forecast-weather-condition div p:nth-child(2){
+        padding-right:0;
+    }
+    .forecast-weather-condition div p{
+        margin-left:0;
+        margin-right:0;
+    }
 }
 
  
