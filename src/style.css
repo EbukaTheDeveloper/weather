@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'MyFont';
     src: url('./titillium.woff') format('woff'),
-      url('./titillium.woff2') format('woff2');
+      url('./titillium2.woff2') format('woff2');
   }
 :root{
     --black:#0f172a;
@@ -12,7 +12,7 @@ body{
     color:var(--white);
     font-family: 'MyFont';
     height:100vh;
-    background-image: url('night-sky2.jpg');
+    background-image: url('./night-sky2.jpg');
     background-repeat : no-repeat;
     background-size:cover;
     background-attachment: fixed;
