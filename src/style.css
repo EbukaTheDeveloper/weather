@@ -8,7 +8,6 @@
     --white:#fafaf9;
 }
 body{
-    background: var(--black);
     color:var(--white);
     font-family: 'MyFont';
     height:100vh;
