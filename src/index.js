@@ -1,7 +1,6 @@
 import moment from 'moment';
 import './style.css';
 import 'normalize.css';
-import handleError from './handleError.js';
 import getLocation from './getLocation.js';
 import getDate from './displayDate.js';
 import getTemperature from './getTemperature.js';
@@ -71,6 +70,7 @@ const path4 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
 const path5 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
 const path6 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
 const path7 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+const Status = document.querySelector('.error')
 
 async function getCurrentWeatherStatic(city) {
     const url1 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ff1bb565bf18203275904202a006cdfd&units=metric`;
@@ -79,7 +79,7 @@ async function getCurrentWeatherStatic(city) {
     const responses = await Promise.all([fetch(url1), fetch(url2)]);
 
     const data1 = await responses[0].json();
-    const data2 = await responses[1].json();6
+    const data2 = await responses[1].json();
 
     console.log(data1,data2);
 
@@ -100,6 +100,9 @@ async function getCurrentWeatherStatic(city) {
     addCityButton.addEventListener('click',showSearchBox.bind(this,searchBox));
     goBack.addEventListener('click',goToHome.bind(this,searchBox));
 }
+function handleError(err) {
+    console.log(err);
+  }
 
 getCurrentWeatherStatic('Onitsha').catch(handleError);
 
@@ -108,6 +111,14 @@ function getCurrentWeatherInputValue(){
         getCurrentWeatherStatic(input.value).catch(handleError);
         goToHome(searchBox);
         input.value = '';
+    });
+    input.addEventListener('keypress',(e)=>{
+        if(e.key === 'Enter'){
+            e.preventDefault();
+            getCurrentWeatherStatic(input.value).catch(handleError);
+            goToHome(searchBox);
+            input.value = '';
+        }
     })
 }
 getCurrentWeatherInputValue();
