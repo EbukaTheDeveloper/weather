@@ -11,11 +11,7 @@ body{
     color:var(--white);
     font-family: 'MyFont';
     height:100vh;
-    background-image: url('./night-sky2.jpg');
-    background-repeat : no-repeat;
-    background-size:cover;
-    background-attachment: fixed;
-    background-position: center center;
+    background:#0c0c0c;
 }
 header{
     padding:0.5em 0 0 0;
